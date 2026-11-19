@@ -36,7 +36,7 @@ function Welcome({ reduce, className = '' }) {
       </motion.div>
       <motion.p variants={item} className="mx-auto inline-flex items-center gap-2 rounded-full border border-emerald-300/30 bg-emerald-300/10 px-3.5 py-1.5 text-xs font-semibold tracking-[0.18em] text-emerald-200 backdrop-blur lg:mx-0"><span aria-hidden="true" className="size-1.5 animate-pulse rounded-full bg-lime" />WELCOME TO PINGREACH</motion.p>
       <motion.p variants={item} className="mt-2 text-base font-medium text-emerald-100/90 sm:text-xl">Welcome to PingReach!</motion.p>
-      <h1 className="mt-3 text-3xl font-extrabold leading-[1.08] tracking-tight sm:mt-4 sm:text-6xl xl:text-[3.4rem]">
+      <h1 className="mt-3 text-3xl font-extrabold leading-[1.08] tracking-tight sm:mt-4 sm:text-5xl md:text-6xl lg:text-5xl xl:text-[3.4rem]">
         <Line>Reach Thousands.</Line>
         <Line className="text-gradient">One Message at a Time.</Line>
       </h1>
@@ -66,7 +66,7 @@ export default function HeroSection() {
   return (
     <section className="bg-night-grad relative overflow-hidden text-white">
       <Backdrop />
-      <Container className="relative grid items-center gap-6 pb-12 pt-10 sm:pt-14 lg:min-h-[calc(100vh-4rem)] lg:grid-cols-2 lg:py-12">
+      <Container className="relative grid items-center gap-6 pb-12 pt-10 sm:pt-14 lg:min-h-[calc(100dvh-4rem)] lg:grid-cols-2 lg:py-12">
         <Welcome reduce={reduce} className="lg:max-w-none" />
         <HeroVisual />
       </Container>

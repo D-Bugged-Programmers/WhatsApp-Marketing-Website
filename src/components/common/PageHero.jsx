@@ -16,7 +16,7 @@ export default function PageHero({ eyebrow, title, description, children }) {
           className="mx-auto max-w-3xl text-center"
         >
           {eyebrow && <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand/20 bg-white/70 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-700 backdrop-blur"><span aria-hidden="true" className="size-1.5 animate-pulse rounded-full bg-brand" />{eyebrow}</p>}
-          <h1 className="text-4xl font-extrabold tracking-tight text-ink sm:text-6xl sm:leading-[1.05]">{title}</h1>
+          <h1 className="text-[2rem] font-extrabold tracking-tight text-ink min-[400px]:text-4xl sm:text-5xl md:text-6xl sm:leading-[1.05]">{title}</h1>
           {description && <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">{description}</p>}
           {children && <div className="mt-8">{children}</div>}
         </motion.div>

@@ -123,10 +123,10 @@ export default function IntroExperience() {
             </p>
           </div>
         </motion.div>
-        <div className="pointer-events-none absolute left-5 top-5 flex items-center gap-2 sm:left-8 sm:top-7">
+        <div className="pointer-events-none absolute left-5 top-[max(1.25rem,env(safe-area-inset-top))] flex items-center gap-2 sm:left-8 sm:top-7">
           <LogoMark className="size-7" /><span className="text-sm font-bold tracking-tight text-white">PingReach</span>
         </div>
-        <button type="button" onClick={() => finish(0)} className="absolute right-5 top-5 rounded-full border border-white/20 bg-black/30 px-3.5 py-1.5 text-xs font-medium text-white/80 backdrop-blur transition hover:border-white/50 hover:text-white sm:right-8 sm:top-6">
+        <button type="button" onClick={() => finish(0)} className="absolute right-5 top-[max(1.25rem,env(safe-area-inset-top))] inline-flex min-h-11 items-center rounded-full border border-white/20 bg-black/30 px-3.5 py-1.5 text-xs font-medium text-white/80 backdrop-blur transition hover:border-white/50 hover:text-white sm:right-8 sm:top-6">
           Skip intro
         </button>
         <motion.div aria-hidden="true" style={{ opacity: hintOpacity }} className="pointer-events-none absolute inset-x-0 bottom-10 flex flex-col items-center text-sm text-emerald-200/80">

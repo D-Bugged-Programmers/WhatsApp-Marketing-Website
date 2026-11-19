@@ -27,7 +27,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header className={`sticky top-0 z-50 border-b backdrop-blur-md ${dark ? 'border-white/10 bg-night/80' : 'border-line bg-white/85'}`}>
+    <header className={`pt-safe sticky top-0 z-50 border-b backdrop-blur-md ${dark ? 'border-white/10 bg-night/80' : 'border-line bg-white/85'}`}>
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-2 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2">Skip to content</a>
       <Container className="flex h-16 items-center justify-between">
         <Logo light={dark} />
@@ -60,7 +60,7 @@ export default function Header() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={reduce ? { opacity: 0 } : { height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="overflow-hidden border-t border-line bg-white lg:hidden"
+            className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-line bg-white lg:hidden"
           >
             <Container className="flex flex-col gap-1 py-4">
               {navItems.map((n) => (

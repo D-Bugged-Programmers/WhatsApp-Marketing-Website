@@ -98,7 +98,7 @@ export default function HeroVisual() {
   }, [])
 
   return (
-    <div id="hero-visual" ref={ref} className="relative mx-auto h-[500px] w-full max-w-[640px] sm:h-[540px] lg:h-[620px]" aria-hidden="true">
+    <div id="hero-visual" ref={ref} className="relative mx-auto h-[440px] w-full max-w-[640px] min-[400px]:h-[500px] sm:h-[540px] lg:h-[620px]" aria-hidden="true">
       {ok && !mobile ? (
         <ErrorBoundary fallback={<PhoneFallback step={step} reduce={reduce} />}>
           <Suspense fallback={<PhoneFallback reduce={reduce} />}>

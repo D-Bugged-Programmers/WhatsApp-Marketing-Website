@@ -17,7 +17,16 @@
   --shadow-float: 0 24px 60px -20px rgb(20 83 45 / 0.35), 0 8px 20px -8px rgb(15 23 42 / 0.12);
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+img, svg, video, canvas { max-width: 100%; }
+h1, h2, h3 { overflow-wrap: break-word; }
+/* Notch / home-indicator safe areas (needs viewport-fit=cover). */
+.pt-safe { padding-top: env(safe-area-inset-top); }
+.pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+/* Touch devices have no hover: avoid sticky hover lifts after a tap. */
+@media (hover: none) {
+  .hover\:-translate-y-0\.5:hover, .hover\:-translate-y-1:hover { transform: none; }
+}
 body {
   margin: 0;
   font-family: var(--font-sans);
@@ -25,6 +34,7 @@ body {
   background: #fff;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  overflow-x: clip;
 }
 :focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; border-radius: 6px; }
 
